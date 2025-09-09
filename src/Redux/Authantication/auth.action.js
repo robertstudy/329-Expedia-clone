@@ -43,7 +43,7 @@ export const handlelogout_user = () => {
 export const userRigister = (userData) => async (dispatch) => {
   dispatch(register_request());
   let res = await axios
-    .post(`http://main.duukhaaybxlqo.amplifyapp.com/users`, userData)
+    .post(`https://main.duukhaaybxlqo.amplifyapp.com/users`, userData)
     .then((res) => {
       dispatch(register_success(res.data));
       // console.log(res.data)
@@ -58,7 +58,7 @@ export const userRigister = (userData) => async (dispatch) => {
 export const fetch_users = (dispatch) => {
   dispatch(register_request());
   axios
-    .get(`http://main.duukhaaybxlqo.amplifyapp.com/users`)
+    .get(`https://main.duukhaaybxlqo.amplifyapp.com/users`)
     .then((res) => {
       dispatch(get_users(res.data));
     })
